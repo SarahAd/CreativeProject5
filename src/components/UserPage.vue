@@ -1,7 +1,7 @@
 <template>
   <div class="feed">
     <h2>
-      {{userView.name}} @{{userView.username}}
+      {{userView.name}} <span class="special">@{{userView.username}}</span>
       <span v-if="user.id !== userView.id">
 	<button class="alternate" v-if="isFollowing" v-on:click="unfollow">Unfollow</button>
 	<button class="alternate" v-else v-on:click="follow">Follow</button>
@@ -12,7 +12,7 @@
       <feed-list v-bind:feed="feed" />
     </div>
     <div v-else>
-      <button class="alternate" v-on:click="toggle">Show Tweets</button>
+      <button class="alternate" v-on:click="toggle">Show Recipes</button>
       <h3>Following</h3>
       <user-list v-bind:users="followingView"/>
       <h3>Followers</h3>
@@ -80,3 +80,22 @@
    }
  }
 </script>
+<style scoped>
+.feed {
+  margin-left: 3vw;
+}
+h2 {
+  color: gray;
+  font-weight: normal;
+}
+h3 {
+  font-weight: normal;
+}
+.special {
+  margin-right: 10px;
+  color: #E03C31;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  text-shadow: 0.2vw 0.2vw 0.4vw #DCDCDC;
+}
+</style>

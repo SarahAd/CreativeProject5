@@ -2,24 +2,25 @@
   <div class="feed">
     <div>
       <form enctype="multipart/form-data" v-on:submit.prevent="tweet" class="tweetForm">
-	<textarea v-model="text" placeholder=""/>
+        <h1>Share a Recipe</h1>
+	       <textarea v-model="text" placeholder="Be sure to include your recipe's name, all needed igredients, and instructions on how to make it."/>
 	<div v-bind:style="{inactive: !imagePreview, active:imagePreview }">
 	  <img class="preview" v-bind:src="imageData">
 	</div>
 	<div class="buttons">
 	  <div class="icon">
-	    <label for="file-input">
+	   <!--  <label for="file-input">
 	      <i class="far fa-image" aria-hidden="true"></i>
-	    </label>
+	    </label> -->
 	    <input id="file-input" type="file" v-on:change="previewImage" accept="image/*" class="input-file">
 	  </div>
 	  <div class="buttonWrap">
-	    <button class="primary" type="submit">Tweet</button>
+	    <button class="alternate" type="submit">Share Recipe!</button>
 	  </div>
 	</div>
       </form>
     </div>
-    <feed-list v-bind:feed="feed" />
+    <feed-list class="feedlist" v-bind:feed="feed" />
   </div>
 </template>
 
@@ -77,10 +78,15 @@
 </script>
 
 <style scoped>
+ .feedlist {
+    margin-left: 3vw;
+ }
  .tweetForm {
      background: #eee;
      padding: 10px;
      margin-bottom: 10px;
+     margin-left: 3vw;
+    background-image: url("/static/images/food.jpg");
  }
  .buttons {
      display: flex;
@@ -102,12 +108,31 @@
      float:right;
  }
  textarea {
-     width: 100%;
-     height: 5em;
+     width: 98%;
+     height: 8em;
      padding: 2px;
-     margin-bottom: 5px;
+     margin: 1vw;
      resize: none;
      box-sizing: border-box;
+     padding: 1vw;
+    font-size: 3vw;
+    font-weight: normal;
+    opacity: 0.9;
+}
+ h1 {
+    margin-bottom: 0px;
+    align-content: center;
+    text-align: center;
+    color: white;
+    padding: 2vw 3vw 2vw 3vw;
+    text-shadow: 0.2vw 0.2vw 0.4vw black;
+    font-family: 'Poiret One', cursive;
+ }
+ p {
+  padding: 1vw;
+  color: white;
+  text-shadow: 0.2vw 0.2vw 0.4vw black;
+  font-size: 4vw;
  }
  input[type="file"] {
      display: none;

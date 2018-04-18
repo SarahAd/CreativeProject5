@@ -5,6 +5,10 @@
   </div>
 </template>
 
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Montserrat|Poiret+One|Cinzel+Decorative|Cinzel|Meddon|Julius+Sans+One|Amatic+SC|Calligraffitti|Bad+Script|Shadows+Into+Light|Over+the+Rainbow');
+</style>
+
 <script>
  import AppHeader from './components/AppHeader';
  export default {
@@ -17,15 +21,15 @@
  /* https://color.adobe.com/CS04-color-theme-1994456/?showPublished=true */
  body {
      font-size: 18px;
-     padding: 20px 100px 0px 100px;
+    padding-bottom: 10vw;
      font-family: 'Avenir', Helvetica, Arial, sans-serif;
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
  }
  button {
-     color: #fff;
-     min-width: 100px;
-     line-height: 1em;
+     color: #77C4D3;
+     width: calc(18px + 15vw);
+     line-height: 1.8em;
      border: none;
      border-radius: 5px;
      color: white;
@@ -37,7 +41,7 @@
      margin: 4px 2px;
  }
  button.primary {
-     background-color: #F35537;
+     background-color: #E03C31;
  }
  button.alternate {
      background-color: #77C4D3;
@@ -57,6 +61,7 @@
  }
  a {
      color: #77C4D3;
+     text-decoration: none;
  }
  .flexWrapper {
      display:flex;

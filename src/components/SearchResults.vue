@@ -1,7 +1,7 @@
 <template>
   <div class="feed">
     <h1>Search Results</h1>
-    <p>Searched for {{keywords}}</p>
+    <p>Searched for: {{keywords}}</p>
     <feed-list v-bind:feed="feed" />
   </div>
 </template>
@@ -29,3 +29,22 @@
    },
  }
 </script>
+
+<style scoped>
+.feed {
+  margin-left: 3vw;
+}
+h1 {
+   margin-bottom: 0px;
+    align-content: center;
+    text-align: center;
+    color: #E03C31;
+    padding: 2vw 3vw 2vw 3vw;
+    text-shadow: 0.2vw 0.2vw 0.4vw #DCDCDC;
+    font-family: 'Poiret One', cursive;
+}
+p {
+  margin-left: 1.5vw;
+  color: gray;
+}
+</style>

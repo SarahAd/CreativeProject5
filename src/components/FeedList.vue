@@ -60,12 +60,15 @@
      margin-bottom: 0px;
  }
  .user {
-     font-weight: bold;
+     font-weight: normal;
      margin-right: 10px;
+     color: gray;
  }
  .handle {
      margin-right: 10px;
-     color: #666;
+     color: #77C4D3;
+     font-family: 'Poiret One', cursive;
+     font-weight: bold;
  }
  .time {
      float: right;
